@@ -5,21 +5,21 @@ import Notiflix from 'notiflix';
 import "flatpickr/dist/flatpickr.min.css";
 
 
-getInput= document.querySelector(`input`);
+const getInput = document.querySelector(`input`);
 
-getData = document.getElementById(`datetime-picker`);
+const getData = document.getElementById(`datetime-picker`);
 
-getButton = document.querySelector(`button`);
+const getButton = document.querySelector(`button`);
 console.log(getButton);
 
 getButton.disabled = true;
 
-getSpan = document.getElementsByClassName(`value`);
+const getSpan = document.getElementsByClassName(`value`);
 
-getDay = getSpan[0];
-getHour = getSpan[1];
-getMinute=getSpan[2];
-getSecond= getSpan[3];
+let getDay = getSpan[0];
+let getHour = getSpan[1];
+let getMinute=getSpan[2];
+let getSecond= getSpan[3];
 
 
 
@@ -85,8 +85,6 @@ getButton.addEventListener(`click`, (event)=>{
         getVariable =convertMs(ms);
 
 
-        // console.log(ms);
-        // console.log(getVariable);
             
             getDay.innerHTML = getVariable.days;
             getHour.innerHTML= getVariable.hours;
@@ -105,7 +103,6 @@ getButton.addEventListener(`click`, (event)=>{
         }
 
     };
-
     
     flatpickr(getData, options, );
 
