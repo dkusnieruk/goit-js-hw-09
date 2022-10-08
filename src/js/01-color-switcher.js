@@ -7,18 +7,20 @@ const getButton = document.getElementsByTagName(`button`);
 console.log(getButton);
 let timeriD;
 
+const startButton = getButton[0];
+const endButton = getButton[1];
 
-getButton[0].addEventListener(`click`, (event)=>{
+startButton.addEventListener(`click`, (event)=>{
 timeriD =setInterval(() => {
     document.body.style.backgroundColor = getRandomHexColor();
 }, 1000);
 event.target.disabled = true;
-getButton[1].disabled = false;
+endButton.disabled = false;
 } );
 
-getButton[1].addEventListener(`click`, (event)=>{
+endButton.addEventListener(`click`, (event)=>{
     clearInterval(timeriD);
     event.target.disabled= true;
-    getButton[0].disabled = false;
+    startButton.disabled = false;
 
 })
