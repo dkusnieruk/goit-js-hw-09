@@ -5,7 +5,7 @@ function getRandomHexColor() {
 
 const getButton = document.getElementsByTagName(`button`);
 console.log(getButton);
-
+let timeriD = null;
 getButton[0].addEventListener(`click`, (event)=>{
 timeriD =setInterval(() => {
     document.body.style.backgroundColor = getRandomHexColor();
