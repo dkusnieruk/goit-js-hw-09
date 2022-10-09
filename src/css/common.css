@@ -16,3 +16,41 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer {
+  display:flex;
+  flex-direction:row;
+}
+
+.field {
+  display:flex;
+  flex-direction:column;
+  margin:5px;
+  margin-top:15px;
+  align-items:center;
+}
+
+.value {
+  font-size: 30px;
+}
+
+.label{ 
+  font-weight: bold;
+  font-size:12px;
+  text-transform:uppercase;
+  align-items: center;
+}
+
+.task1__button1,
+.task1__button2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  width: 100px;
+  height: 50px;  
+}
+.task1__button1{
+  margin-left:25%;
+}
+.task1__button2{
+  margin-left:10px;
+}

@@ -22,7 +22,13 @@ let getMinute=getSpan[2];
 let getSecond= getSpan[3];
 
 
-
+function addLeadingZero(value){
+    if (value.toString().length){
+    return value= value.toString().padStart(2, "0");
+    } else {
+        return value;
+    }
+}
 
 
 function convertMs(ms) {
@@ -40,8 +46,11 @@ function convertMs(ms) {
     const minutes = Math.floor(((ms % day) % hour) / minute);
     // Remaining seconds
     const seconds = Math.floor((((ms % day) % hour) % minute) / second);
-  
+     
+    
+    
     return { days, hours, minutes, seconds };
+
     
   }
   
@@ -71,25 +80,28 @@ const options = {
             let ms = selectedDates[0] - new Date();
             console.log(ms);
             getButton.disabled= false;
-            let getVariable =convertMs(ms);
-            getDay.innerHTML = getVariable.days;
-            getHour.innerHTML= getVariable.hours;
-            getMinute.innerHTML=getVariable.minutes;
-            getSecond.innerHTML=getVariable.seconds;
+            let getVariable = convertMs(ms);
+
+
+            getDay.innerHTML = addLeadingZero(getVariable.days);
+            getHour.innerHTML= addLeadingZero(getVariable.hours);
+            getMinute.innerHTML=addLeadingZero(getVariable.minutes);
+            getSecond.innerHTML=addLeadingZero(getVariable.seconds);
+
             let timerId=null;
 
 getButton.addEventListener(`click`, (event)=>{
     timerId = setInterval(() => {
         const minus = 1000;
         ms -= minus;
-        getVariable =convertMs(ms);
-
+        getVariable = convertMs(ms);
+ 
 
             
-            getDay.innerHTML = getVariable.days;
-            getHour.innerHTML= getVariable.hours;
-            getMinute.innerHTML=getVariable.minutes;
-            getSecond.innerHTML=getVariable.seconds;
+            getDay.innerHTML = addLeadingZero(getVariable.days);
+            getHour.innerHTML= addLeadingZero(getVariable.hours);
+            getMinute.innerHTML=addLeadingZero(getVariable.minutes);
+            getSecond.innerHTML=addLeadingZero(getVariable.seconds);
             if( getVariable.seconds===0){
                 clearInterval(timerId);
             };
