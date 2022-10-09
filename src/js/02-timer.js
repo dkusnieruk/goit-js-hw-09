@@ -96,13 +96,13 @@ getButton.addEventListener(`click`, (event)=>{
         ms -= minus;
         getVariable = convertMs(ms);
  
-
+        
             
             getDay.innerHTML = addLeadingZero(getVariable.days);
             getHour.innerHTML= addLeadingZero(getVariable.hours);
             getMinute.innerHTML=addLeadingZero(getVariable.minutes);
             getSecond.innerHTML=addLeadingZero(getVariable.seconds);
-            if( getVariable.seconds===0){
+            if( getVariable.seconds<=0 && getVariable.minutes<=0 && getVariable.hours <=0){
                 clearInterval(timerId);
             };
       }, 1000);
