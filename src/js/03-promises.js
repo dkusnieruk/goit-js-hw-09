@@ -1,15 +1,5 @@
 import Notiflix from 'notiflix';
-
-const getDelay= document.getElementsByName(`delay`);
-
-const getStep= document.getElementsByName(`step`);
-
-const getAmount=document.getElementsByName(`amount`);
-
-const getButton=document.querySelector(`button`);
-let timerId;
-getButton.addEventListener(`click`,(event)=>{
-  event.preventDefault();
+function createPromise (){
   const position = getAmount[0].value;
   const delay=getStep[0].value;
   const step=getDelay[0].value;
@@ -18,6 +8,7 @@ getButton.addEventListener(`click`,(event)=>{
 let counter = 0;
 
 let timer;
+
 
 setTimeout(function(){
 
@@ -62,7 +53,6 @@ const obietnica = new Promise ((resolve, reject)=>{
       )
     }
 
-  
 })
 
     if (counter >= position) {
@@ -70,4 +60,17 @@ const obietnica = new Promise ((resolve, reject)=>{
     }
 }, delay);
 },step);  
+
+}
+const getDelay= document.getElementsByName(`delay`);
+
+const getStep= document.getElementsByName(`step`);
+
+const getAmount=document.getElementsByName(`amount`);
+
+const getButton=document.querySelector(`button`);
+let timerId;
+getButton.addEventListener(`click`,(event)=>{
+  event.preventDefault();
+  createPromise();  
 });
