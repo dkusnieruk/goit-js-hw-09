@@ -1,41 +1,5 @@
 import Notiflix from 'notiflix';
 
-
-// const promise =function createPromise(position, delay) {
-//   const shouldResolve = Math.random() > 0.3;
-//   if (shouldResolve) {
-//     console.log('fullfill');
-//     Notiflix.Notify.warning(
-//       `✅ Fulfilled promise ${position} in ${delay}ms`,
-//       {
-//       width:`300px`,
-//       useFontAwesome: true,
-//       warning: {
-//           background: `green`,
-//           textColor:`white`,
-//       }
-//       },
-//     );
-//     // Fulfill
-//   } else {
-//     console.log('reject');
-//     Notiflix.Notify.warning(
-//       `❌ Rejected promise ${position} in ${delay}ms`,
-//       {
-//       width:`300px`,
-//       useFontAwesome: true,
-//       warning: {
-//           background: `red`,
-//           textColor:`white`,
-//       }
-//       },
-//     );
-//     // Reject
-//   }
-// }
-
-
-
 const getDelay= document.getElementsByName(`delay`);
 
 const getStep= document.getElementsByName(`step`);
@@ -107,12 +71,3 @@ const obietnica = new Promise ((resolve, reject)=>{
 }, delay);
 },step);  
 });
-   
-// setTimeout(()=>{
-//   createPromise(position,delay)
-  
-// }, step);
-// const isSuccess = Math.random() > 0.3;
-
-
-
