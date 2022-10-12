@@ -58,7 +58,7 @@ let counter = 0;
 let timer = setInterval(function() {
   
     counter += 1;
-    const getOutput = +step + (+delay*(counter));
+    const getOutput = +step + (+delay*(counter-1));
     console.log(getOutput);
 const obietnica = new Promise ((resolve, reject)=>{
   
