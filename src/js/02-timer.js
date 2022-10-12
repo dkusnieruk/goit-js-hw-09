@@ -80,13 +80,13 @@ const options = {
             let ms = selectedDates[0] - new Date();
             console.log(ms);
             getButton.disabled= false;
-            let getVariable = convertMs(ms);
+            // let getVariable = convertMs(ms);
 
 
-            getDay.innerHTML = addLeadingZero(getVariable.days);
-            getHour.innerHTML= addLeadingZero(getVariable.hours);
-            getMinute.innerHTML=addLeadingZero(getVariable.minutes);
-            getSecond.innerHTML=addLeadingZero(getVariable.seconds);
+            // getDay.innerHTML = addLeadingZero(getVariable.days);
+            // getHour.innerHTML= addLeadingZero(getVariable.hours);
+            // getMinute.innerHTML=addLeadingZero(getVariable.minutes);
+            // getSecond.innerHTML=addLeadingZero(getVariable.seconds);
 
             let timerId=null;
 
