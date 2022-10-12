@@ -86,7 +86,7 @@ getButton.addEventListener(`click`, (event)=>{
     timerId = setInterval(() => {
         const minus = 1000;
         ms -= minus;
-        getVariable = convertMs(ms);
+        let getVariable = convertMs(ms);
         
         
             getButton.disabled=true;
