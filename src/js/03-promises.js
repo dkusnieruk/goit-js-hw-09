@@ -53,9 +53,11 @@ getButton.addEventListener(`click`,(event)=>{
 
 let counter = 0;
 
+let timer;
 
+setTimeout(function(){
 
-let timer = setInterval(function() {
+timer = setInterval(function() {
   
     counter += 1;
     const getOutput = +step + (+delay*(counter-1));
@@ -63,7 +65,9 @@ let timer = setInterval(function() {
 const obietnica = new Promise ((resolve, reject)=>{
   
     const shouldResolve = Math.random() > 0.3;
-    if (shouldResolve){
+    if (shouldResolve)
+    
+    {
       resolve(
         Notiflix.Notify.warning(
           `✅ Fulfilled promise ${counter} in ${getOutput}ms`,
@@ -101,7 +105,7 @@ const obietnica = new Promise ((resolve, reject)=>{
         clearInterval(timer);
     }
 }, delay);
-  
+},step);  
 });
    
 // setTimeout(()=>{
