@@ -87,9 +87,9 @@ getButton.addEventListener(`click`, (event)=>{
         const minus = 1000;
         ms -= minus;
         getVariable = convertMs(ms);
- 
         
-            
+        
+            getButton.disabled=true;
             getDay.innerHTML = addLeadingZero(getVariable.days);
             getHour.innerHTML= addLeadingZero(getVariable.hours);
             getMinute.innerHTML=addLeadingZero(getVariable.minutes);
