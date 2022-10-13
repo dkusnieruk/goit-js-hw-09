@@ -17,9 +17,10 @@ timer = setInterval(function() {
     counter += 1;
     const getOutput = +step + (+delay*(counter-1));
     console.log(getOutput);
-const obietnica = new Promise ((resolve, reject)=>{
+    const obietnica = new Promise ((resolve, reject)=>{
   
     const shouldResolve = Math.random() > 0.3;
+    
     if (shouldResolve)
     
     {
