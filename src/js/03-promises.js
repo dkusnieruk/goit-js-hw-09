@@ -63,6 +63,7 @@ timer = setInterval(function() {
 },step);  
 
 }
+
 const getDelay= document.getElementsByName(`delay`);
 
 const getStep= document.getElementsByName(`step`);
@@ -75,3 +76,4 @@ getButton.addEventListener(`click`,(event)=>{
   event.preventDefault();
   createPromise();  
 });
+
